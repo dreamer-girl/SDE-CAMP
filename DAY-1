@@ -1,0 +1,204 @@
+
+//Question 1-Input Output
+import java.util.Scanner;
+
+public class InputOutput {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter an integer : ");
+        int n = sc.nextInt();
+
+        System.out.println("Enter a double : ");
+        double d = sc.nextDouble();
+
+        System.out.println("Enter a string : ");
+        String s = sc.next();
+
+        System.out.println("Your inputs are: ");
+        System.out.println("Integer: " + n);
+        System.out.println("Double: " + d);
+        System.out.println("String: " + s);
+    }
+}
+//Question 2-Check Age
+public class CheckAge {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your age: ");
+        int Age = sc.nextInt();
+
+        if (Age >= 18) {
+            System.out.println("Eligible for voting");
+        } else {
+            System.out.println("Not Eligible for voting");
+        }
+    }
+    
+    //Question 3
+    public class Print100 {
+    public static void main(String[] args) {
+        int n = 100;
+
+       
+        for (int i = 1; i <= n; i++) {
+            System.out.print(i + " ");
+        }
+
+        
+        }
+    }
+    //Question 4
+   import java.util.Scanner;
+
+class Claculator {
+  public static void main(String[] args) {
+
+    char operator;
+    Double number1, number2, result;
+
+    // create an object of Scanner class
+    Scanner input = new Scanner(System.in);
+
+    // ask users to enter operator
+    System.out.println("Choose an operator: +, -, *, or /");
+    operator = input.next().charAt(0);
+
+    // ask users to enter numbers
+    System.out.println("Enter first number");
+    number1 = input.nextDouble();
+
+    System.out.println("Enter second number");
+    number2 = input.nextDouble();
+
+    switch (operator) {
+
+      // performs addition between numbers
+      case '+':
+        result = number1 + number2;
+        System.out.println(number1 + " + " + number2 + " = " + result);
+        break;
+
+      // performs subtraction between numbers
+      case '-':
+        result = number1 - number2;
+        System.out.println(number1 + " - " + number2 + " = " + result);
+        break;
+
+      // performs multiplication between numbers
+      case '*':
+        result = number1 * number2;
+        System.out.println(number1 + " * " + number2 + " = " + result);
+        break;
+
+      // performs division between numbers
+      case '/':
+        result = number1 / number2;
+        System.out.println(number1 + " / " + number2 + " = " + result);
+        break;
+
+      default:
+        System.out.println("Invalid operator!");
+        break;
+    }
+
+    input.close();
+  }
+}
+// Question 5
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a number: ");
+        int n = sc.nextInt();
+
+        if (n % 2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+    }
+// Question 6
+public class LargestAmong3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = sc.nextInt();
+        System.out.print("Enter second number: ");
+        int b = sc.nextInt();
+        System.out.print("Enter third number: ");
+        int c = sc.nextInt();
+
+        if (a > b && a > c) {
+            System.out.println(a + " is Greatest among all");
+        } else {
+            if (b > c) {
+                System.out.println(b + " is Greatest among all");
+            } else {
+                System.out.println(c + " is Greatest among all");
+            }
+        }
+
+    }
+    
+ // Question 7
+ public class SumOfN {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the value of n: ");
+        int n = sc.nextInt();
+
+        int res = (n * (n + 1)) / 2;
+
+        System.out.println(res);
+    }
+}
+//Question 8
+public class CheckVowel {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a character: ");
+        String s = sc.next();
+        char c = s.charAt(0);
+
+        if (c == 'a' || c == 'A' || c == 'e' || c == 'E' || c == 'i' || c == 'I' || c == 'o' || c == 'O' || c == 'u' || c == 'U') {
+            System.out.println("Vowel");
+        } else {
+            System.out.println("Not Vowel");
+        }
+
+    }
+    
+//Question 9
+public class TypeConversion {
+    public static void main(String[] args) {
+        int n = 50;
+        double d = (double) n;
+        System.out.println("Integer to Double : "+ d);
+
+        float f = 20.5f;
+        int x = (int) f;
+        System.out.println("Float to Integer : "+ x );
+
+        char c = 'a';
+        int y = c;
+        System.out.println("Character to Integer: "+ y);
+    }
+}
+
+// Question 10
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a positive number to find the factorial: ");
+        int n = sc.nextInt();
+
+        long res = 1;
+        for(int i = 1; i <= n; i++) {
+            res *= i;
+        }
+        System.out.println("Factorial is " + res);
+    }
